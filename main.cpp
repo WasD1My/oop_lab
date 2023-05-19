@@ -15,6 +15,7 @@ int main() {
         std::cin >> choice;
 
         switch (choice) {
+            // Add a Circle
             case 1: {
                 double radius;
                 std::cout << "Enter radius of the circle: ";
@@ -23,6 +24,7 @@ int main() {
                 container.insertAt(container.getSize(), circle);
                 break;
             }
+            // Add a Rectangle
             case 2: {
                 double width, height;
                 std::cout << "Enter width and height of the rectangle: ";
@@ -31,6 +33,7 @@ int main() {
                 container.insertAt(container.getSize(), rectangle);
                 break;
             }
+            // Add a Triangle
             case 3: {
                 double side1, side2, side3;
                 std::cout << "Enter the sides of the triangle: ";
@@ -39,6 +42,7 @@ int main() {
                 container.insertAt(container.getSize(), triangle);
                 break;
             }
+            // Remove a figure
             case 4: {
                 size_t index;
                 std::cout << "Enter the index of the figure to remove (starting from 0): ";
@@ -46,6 +50,7 @@ int main() {
                 container.removeAt(index);
                 break;
             }
+            // Display Areas
             case 5: {
                 for (size_t i = 0; i < container.getSize(); ++i) {
                     std::cout << "Area of figure " << i << ": " << container[i]->getArea() << "\n";

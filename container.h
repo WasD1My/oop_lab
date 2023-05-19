@@ -19,10 +19,12 @@ public:
         }
     }
 
+    // Get the size of the array
     size_t getSize() const {
         return size;
     }
 
+    // Get the figure at the specified index
     Figure* operator[](size_t index) const {
         if (index >= size) {
             throw std::out_of_range("Index out of range");
@@ -30,6 +32,7 @@ public:
         return figures[index];
     }
 
+    // Get the figure at the specified index
     Figure*& operator[](size_t index) {
         if (index >= size) {
             throw std::out_of_range("Index out of range");
@@ -37,6 +40,7 @@ public:
         return figures[index];
     }
 
+    // Add a figure to the end of the array
     void insertAt(size_t index, Figure* figure) {
         if (size == MAX_SIZE) {
             throw std::out_of_range("Array is full");
@@ -51,6 +55,7 @@ public:
         ++size;
     }
 
+    // Remove a figure from the array
     void removeAt(size_t index) {
         if (index >= size) {
             throw std::out_of_range("Index out of range");
